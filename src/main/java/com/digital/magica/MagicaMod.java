@@ -1,9 +1,11 @@
 package com.digital.magica;
 
+import com.digital.magica.item.ModItems;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
@@ -24,7 +26,10 @@ public class MagicaMod
     private static final Logger LOGGER = LogManager.getLogger();
 
     public MagicaMod() {
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
+        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        ModItems.register(eventBus);
+        //
+        eventBus.addListener(this::setup);
         MinecraftForge.EVENT_BUS.register(this);
     }
 
