@@ -17,7 +17,7 @@ public class ModItems {
     public static final RegistryObject<Item> NEO_CRYSTAL = ITEMS.register("neo_crystal",
             () -> new Item(new Item.Properties().rarity(Rarity.UNCOMMON).tab(ModCreativeModeTab.MAGICA_TAB)));
 
-    public static final RegistryObject<Item> ZAU_CRYSTAL = ITEMS.register("zau_crystall",
+    public static final RegistryObject<Item> ZAU_CRYSTAL = ITEMS.register("zau_crystal",
             () -> new Item(new Item.Properties().rarity(Rarity.UNCOMMON).tab(ModCreativeModeTab.MAGICA_TAB)));
     //
 
