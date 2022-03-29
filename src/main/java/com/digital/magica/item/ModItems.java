@@ -13,8 +13,8 @@ public class ModItems {
     public static DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, MagicaMod.MOD_ID);
     //
-public static final RegistryObject<Item> TEST_ITEM = ITEMS.register("test_item",
-            () -> new Item(new Item.Properties().rarity(Rarity.RARE).durability(15).tab(CreativeModeTab.TAB_SEARCH)));
+public static final RegistryObject<Item> NEO_CRYSTAL = ITEMS.register("neo_crystal",
+            () -> new Item(new Item.Properties().rarity(Rarity.UNCOMMON).tab(ModCreativeModeTab.MAGICA_TAB)));
     //
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
