@@ -1,3 +1,6 @@
 {
-  "item.magica.neo_crystal": "Neo Crystal"
+  "item.magica.neo_crystal": "Neo Crystal",
+  "item.magica.zau_crystall": "Zau Crysal",
+
+  "itemGroup.magicatab": "Magica"
 }
