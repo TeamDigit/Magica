@@ -8,7 +8,7 @@ public class ModCreativeModeTab {
     public static final CreativeModeTab MAGICA_TAB = new CreativeModeTab("magicatab") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(ModItems.NEO_CRYSTAL.get());
+            return new ItemStack(ModItems.GEO_CRYSTAL.get());
         }
     };
 }
