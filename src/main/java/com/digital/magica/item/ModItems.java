@@ -22,6 +22,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> GEO_CRYSTAL = ITEMS.register("geo_crystal",
             () -> new Item(new Item.Properties().rarity(Rarity.UNCOMMON).tab(ModCreativeModeTab.MAGICA_TAB)));
+
+    public static final RegistryObject<Item> OAU_CRYSTAL = ITEMS.register("oau_crystal",
+            () -> new Item(new Item.Properties().rarity(Rarity.UNCOMMON).tab(ModCreativeModeTab.MAGICA_TAB)));
     //
 
     public static void register(IEventBus eventBus) {
