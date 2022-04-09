@@ -1,5 +1,6 @@
 package com.digital.magica;
 
+import com.digital.magica.block.ModBlocks;
 import com.digital.magica.item.ModItems;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -28,6 +29,7 @@ public class MagicaMod
     public MagicaMod() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         ModItems.register(eventBus);
+        ModBlocks.register(eventBus);
         //
         eventBus.addListener(this::setup);
         MinecraftForge.EVENT_BUS.register(this);
