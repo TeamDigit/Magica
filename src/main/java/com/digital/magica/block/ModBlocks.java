@@ -1,6 +1,7 @@
 package com.digital.magica.block;
 
 import com.digital.magica.MagicaMod;
+import com.digital.magica.custom.TestBlock;
 import com.digital.magica.item.ModCreativeModeTab;
 import com.digital.magica.item.ModItems;
 import net.minecraft.world.item.BlockItem;
@@ -18,25 +19,24 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.Supplier;
 
+import static com.digital.magica.item.ModItems.registerBlockItem;
+
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MagicaMod.MOD_ID);
 
-    //
+    // Blocks
     public static final RegistryObject<Block> TEST_BLOCK = registerBlock("test_block",
-            () -> new Block(BlockBehaviour.Properties.of(Material.AIR).strength(5f).requiresCorrectToolForDrops().sound(SoundType.BAMBOO)), ModCreativeModeTab.MAGICA_TAB);
-    //
+            () -> new TestBlock(BlockBehaviour.Properties.of(Material.ICE).strength(5f).requiresCorrectToolForDrops().sound(SoundType.BAMBOO)), ModCreativeModeTab.MAGICA_TAB);
 
+
+    // Registry block object
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, tab);
         return toReturn;
     }
 
-    private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab) {
-        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(),
-                new Item.Properties().tab(tab)));
-    }
-
+    // Registry block
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
     }
